@@ -19,14 +19,14 @@ export function Footer() {
                   alt="Verexa Logo"
                   width={120}
                   height={50}
-                  className="h-10 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-transform duration-300 hover:scale-105"
+                  className="h-8 sm:h-10 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-transform duration-300 hover:scale-105"
                   priority
                 />
                 <div className="flex flex-col justify-center drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]">
-                  <span className="font-heading text-[27px] font-medium leading-[1.05] bg-linear-to-b from-foreground from-20% to-muted-foreground sm:from-foreground sm:from-30% sm:to-muted-foreground to-100% bg-clip-text text-transparent uppercase">
+                  <span className="font-heading text-[22px] sm:text-[27px] font-medium leading-[1.05] bg-linear-to-b from-foreground from-20% to-muted-foreground sm:from-foreground sm:from-30% sm:to-muted-foreground to-100% bg-clip-text text-transparent uppercase">
                     verexa
                   </span>
-                  <span className="text-[10px] font-light tracking-[0.2em] text-foreground/70 uppercase mt-1 leading-none">
+                  <span className="text-[8px] sm:text-[10px] font-light tracking-[0.2em] text-foreground/70 uppercase mt-1 leading-none">
                     technologies
                   </span>
                 </div>
@@ -75,16 +75,6 @@ export function Footer() {
             </h4>
             <ul className="space-y-4">
               <li>
-                <span className="text-muted-foreground text-sm hover:text-white transition-colors cursor-default">
-                  +1 (437) 660-7347
-                </span>
-              </li>
-              <li>
-                <span className="text-muted-foreground text-sm hover:text-white transition-colors cursor-default">
-                  Toronto, ON, Canada
-                </span>
-              </li>
-              <li>
                 <a
                   href="mailto:verexatechnologies@gmail.com"
                   className="text-muted-foreground text-sm hover:text-primary transition-colors relative group block w-fit"
@@ -93,14 +83,27 @@ export function Footer() {
                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all group-hover:w-full"></span>
                 </a>
               </li>
+              <li>
+                <a
+                  href="tel:+14376607347"
+                  className="text-muted-foreground text-sm hover:text-white transition-colors cursor-default"
+                >
+                  +1 (437) 660-7347
+                </a>
+              </li>
+              <li>
+                <span className="text-muted-foreground text-sm hover:text-white transition-colors cursor-default">
+                  Toronto, ON, Canada
+                </span>
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-center gap-4">
-          <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Verexa Technologies Inc. All rights
-            reserved.
+        <div className="pt-8 border-t border-white/5 flex items-center justify-center gap-4">
+          <p className="text-muted-foreground text-sm text-center">
+            © {new Date().getFullYear()} Verexa Technologies Inc.{" "}
+            <span className="text-nowrap">All rights reserved.</span>
           </p>
         </div>
       </div>
@@ -112,6 +115,7 @@ function SocialLink({ href, icon }: { href: string; icon: React.ReactNode }) {
   return (
     <Link
       href={href}
+      target="_blank"
       className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:text-white hover:bg-white/10 hover:border-white/20 transition-all shadow-inner hover:shadow-lg hover:-translate-y-1"
     >
       {icon}

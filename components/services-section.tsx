@@ -34,7 +34,7 @@ export function ServicesSection() {
       `,
         }}
       />
-      <div className="max-w-[1250px] mx-auto px-4 sm:px-6 relative z-10 pt-24 sm:pt-0 object-contain">
+      <div className="max-w-[1250px] mx-auto px-4 sm:px-6 relative z-10 sm:pt-0 object-contain">
         <div className="text-center mb-16 relative">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.05] bg-linear-to-b from-foreground from-20% to-muted-foreground sm:from-foreground sm:from-30% sm:to-muted-foreground to-100% bg-clip-text text-transparent mb-6">
             Our Services
@@ -272,18 +272,21 @@ function DesignGraphic() {
           />
         </svg>
         {/* Floating Abstract Design Elements */}
-        <div 
+        <div
           className="absolute top-4 left-4 w-16 h-16 bg-linear-to-br from-primary/30 to-transparent rounded-full backdrop-blur-md border border-white/10"
           style={{ animation: "float 6s ease-in-out infinite" }}
         />
-        <div 
+        <div
           className="absolute bottom-6 right-4 w-20 h-10 bg-linear-to-tl from-accent/20 to-transparent rounded-xl backdrop-blur-md border border-white/10"
           style={{ animation: "float 5s ease-in-out infinite reverse" }}
         />
-        
+
         {/* Vector Anchor Points */}
         <div className="absolute top-2 left-2 w-2 h-2 bg-white shadow-[0_0_10px_white] z-10 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-2 right-2 w-2 h-2 bg-white shadow-[0_0_10px_white] z-10 rounded-full animate-pulse" style={{ animationDelay: "1s" }}></div>
+        <div
+          className="absolute bottom-2 right-2 w-2 h-2 bg-white shadow-[0_0_10px_white] z-10 rounded-full animate-pulse"
+          style={{ animationDelay: "1s" }}
+        ></div>
         <div className="absolute top-2 right-2 w-2 h-2 bg-primary shadow-[0_0_10px_hsl(var(--primary))] z-10 rounded-full animate-ping"></div>
 
         {/* Center Glass Panel */}
@@ -306,11 +309,11 @@ function CloudGraphic() {
   }, []);
 
   return (
-    <div className="w-full h-full pt-16 flex justify-center items-start z-10 relative">
+    <div className="w-full h-full pt-16 flex justify-center items-start z-10 relative group">
       {/* Decorative Connectivity Lines */}
       <svg
         viewBox="0 0 200 120"
-        className="w-[120%] absolute top-12 opacity-40 pointer-events-none"
+        className="w-[120%] absolute top-12 opacity-40 pointer-events-none group-hover:opacity-70 transition-opacity duration-500"
       >
         <path
           d="M 20 100 C 20 50, 80 30, 100 50 C 120 30, 180 50, 180 100"
@@ -323,9 +326,9 @@ function CloudGraphic() {
       </svg>
       <div className="relative flex flex-col items-center gap-6 mt-4">
         {/* Main Cloud Node */}
-        <div className="w-16 h-16 rounded-2xl bg-primary/20 border border-primary/40 flex items-center justify-center shadow-[0_0_30px_hsl(var(--primary)/0.5)] z-10 relative">
-          <div className="absolute inset-0 rounded-2xl bg-primary/30 animate-ping opacity-20"></div>
-          <Cloud className="w-8 h-8 text-primary" />
+        <div className="w-16 h-16 rounded-2xl bg-primary/20 border border-primary/40 flex items-center justify-center shadow-[0_0_30px_hsl(var(--primary)/0.5)] z-10 relative group-hover:scale-110 transition-all duration-500 hover:border-primary/50 hover:shadow-[0_0_40px_hsl(var(--primary))]">
+          <div className="absolute inset-0 rounded-2xl bg-primary/30 animate-ping opacity-20 group-hover:opacity-30 transition-opacity"></div>
+          <Cloud className="w-8 h-8 text-primary drop-shadow-md group-hover:text-white transition-colors" />
         </div>
         {/* Connected Server Nodes */}
         <div className="flex gap-4">

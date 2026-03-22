@@ -1,49 +1,8 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const handleTimeUpdate = () => {
-      const duration = video.duration;
-      const currentTime = video.currentTime;
-
-      // Fade in over first 0.5 seconds
-      if (currentTime < 0.5) {
-        video.style.opacity = String((currentTime / 0.5) * 1);
-      }
-      // Fade out over last 0.5 seconds
-      else if (currentTime > duration - 0.5) {
-        video.style.opacity = String(
-          (1 - (currentTime - (duration - 0.5)) / 0.5) * 1,
-        );
-      } else {
-        video.style.opacity = "1";
-      }
-    };
-
-    const handleEnded = () => {
-      video.style.opacity = "0";
-      setTimeout(() => {
-        video.currentTime = 0;
-        video.play();
-      }, 100);
-    };
-
-    video.addEventListener("timeupdate", handleTimeUpdate);
-    video.addEventListener("ended", handleEnded);
-
-    return () => {
-      video.removeEventListener("timeupdate", handleTimeUpdate);
-      video.removeEventListener("ended", handleEnded);
-    };
-  }, []);
   return (
     <section className="relative overflow-hidden bg-background">
       <div className="relative z-20 flex flex-col items-center justify-center pt-40">
@@ -73,19 +32,14 @@ export function HeroSection() {
           </Button>
         </div>
       </div>
-      {/* Background Gradient to fade video at the bottom */}
+      {/* Background Gradient to fade background at the bottom */}
       <div className="absolute bottom-0 inset-x-0 h-48 bg-linear-to-b from-transparent to-background pointer-events-none z-10" />
 
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        playsInline
-        className="-mt-24 lg:-mt-48 w-full h-auto min-h-[60%] object-cover object-top opacity-0 pointer-events-none z-0"
-        style={{ opacity: 0 }}
-      >
-        <source src="/hero-bg.mp4" type="video/mp4" />
-      </video>
+      <img
+        src="/hero-bg.gif"
+        alt="Hero Background"
+        className="-mt-24 lg:-mt-[15%] w-full h-[600px] lg:h-auto min-h-[60%] object-cover object-top opacity-50 xl:opacity-75 pointer-events-none z-0"
+      />
     </section>
   );
 }
