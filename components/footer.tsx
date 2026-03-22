@@ -9,9 +9,9 @@ export function Footer() {
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="max-w-[1250px] mx-auto px-4 sm:px-6 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 sm:gap-x-8 gap-y-12 lg:gap-8 mb-8 md:mb-16">
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-4 sm:gap-x-8 gap-y-12 lg:gap-8 mb-8 md:mb-16">
           {/* Brand Col */}
-          <div className="col-span-2 md:col-span-2 lg:col-span-2">
+          <div className="col-span-3 md:col-span-2 lg:col-span-2">
             <Link href="/">
               <div className="flex items-center gap-3">
                 <Image
@@ -37,10 +37,22 @@ export function Footer() {
               design, build, and deploy the future.
             </p>
             <div className="flex items-center gap-4">
-              <SocialLink href="#" icon={<Twitter className="w-4 h-4" />} />
-              <SocialLink href="#" icon={<Youtube className="w-4 h-4" />} />
-              <SocialLink href="#" icon={<Linkedin className="w-4 h-4" />} />
-              <SocialLink href="#" icon={<Instagram className="w-4 h-4" />} />
+              <SocialLink
+                href="https://twitter.com/verexatech"
+                icon={<Twitter className="w-4 h-4" />}
+              />
+              <SocialLink
+                href="https://www.linkedin.com/company/verexa-technologies/"
+                icon={<Linkedin className="w-4 h-4" />}
+              />
+              <SocialLink
+                href="https://www.instagram.com/verexatech/"
+                icon={<Instagram className="w-4 h-4" />}
+              />
+              <SocialLink
+                href="https://www.youtube.com/@verexatech"
+                icon={<Youtube className="w-4 h-4" />}
+              />
             </div>
           </div>
 
@@ -57,7 +69,7 @@ export function Footer() {
           </div>
 
           {/* Links Col 2 */}
-          <div className="col-span-1">
+          <div className="col-span-2 md:col-span-1">
             <h4 className="text-foreground tracking-wide uppercase text-xs font-semibold mb-6">
               Contact Us
             </h4>

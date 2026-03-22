@@ -22,7 +22,7 @@ export function Navbar() {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 20;
       setScrolled(isScrolled);
-      
+
       // Clear hash when scrolled straight to top
       if (window.scrollY < 100 && window.location.hash) {
         window.history.replaceState(null, "", window.location.pathname);
@@ -45,7 +45,7 @@ export function Navbar() {
           }
         });
       },
-      { rootMargin: "-40% 0px -40% 0px", threshold: 0 }
+      { rootMargin: "-40% 0px -40% 0px", threshold: 0 },
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -162,13 +162,13 @@ export function Navbar() {
           >
             About
           </Link>
-          <Link
+          {/* <Link
             href="#portfolio"
             onClick={() => setMobileMenuOpen(false)}
             className="text-3xl font-medium tracking-wide text-foreground/90 hover:text-primary transition-colors"
           >
             Portfolio
-          </Link>
+          </Link> */}
           <Link
             href="#contact"
             onClick={() => setMobileMenuOpen(false)}
