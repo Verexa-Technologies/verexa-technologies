@@ -1,0 +1,128 @@
+import Link from "next/link";
+import Image from "next/image";
+import { Twitter, Linkedin, Instagram, Youtube } from "lucide-react";
+
+export function Footer() {
+  return (
+    <footer className="border-t border-border/10 bg-background/80 backdrop-blur-3xl pt-20 pb-8 relative overflow-hidden">
+      {/* Decorative Glow */}
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div className="max-w-[1250px] mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 sm:gap-x-8 gap-y-12 lg:gap-8 mb-8 md:mb-16">
+          {/* Brand Col */}
+          <div className="col-span-2 md:col-span-2 lg:col-span-2">
+            <Link href="/">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/logo.png"
+                  alt="Verexa Logo"
+                  width={120}
+                  height={50}
+                  className="h-10 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-transform duration-300 hover:scale-105"
+                  priority
+                />
+                <div className="flex flex-col justify-center drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]">
+                  <span className="font-heading text-[27px] font-medium leading-[1.05] bg-linear-to-b from-foreground from-20% to-muted-foreground sm:from-foreground sm:from-30% sm:to-muted-foreground to-100% bg-clip-text text-transparent uppercase">
+                    verexa
+                  </span>
+                  <span className="text-[10px] font-light tracking-[0.2em] text-foreground/70 uppercase mt-1 leading-none">
+                    technologies
+                  </span>
+                </div>
+              </div>
+            </Link>
+            <p className="text-muted-foreground text-sm font-medium leading-relaxed max-w-sm mt-4 mb-8">
+              Empowering global brands with cutting-edge digital experiences. We
+              design, build, and deploy the future.
+            </p>
+            <div className="flex items-center gap-4">
+              <SocialLink href="#" icon={<Twitter className="w-4 h-4" />} />
+              <SocialLink href="#" icon={<Youtube className="w-4 h-4" />} />
+              <SocialLink href="#" icon={<Linkedin className="w-4 h-4" />} />
+              <SocialLink href="#" icon={<Instagram className="w-4 h-4" />} />
+            </div>
+          </div>
+
+          {/* Links Col 1 */}
+          <div className="col-span-1">
+            <h4 className="text-foreground tracking-wide uppercase text-xs font-semibold mb-6">
+              Quick Links
+            </h4>
+            <ul className="space-y-4">
+              <FooterLink href="#services">Services</FooterLink>
+              <FooterLink href="#portfolio">About</FooterLink>
+              <FooterLink href="#contact">Contact</FooterLink>
+            </ul>
+          </div>
+
+          {/* Links Col 2 */}
+          <div className="col-span-1">
+            <h4 className="text-foreground tracking-wide uppercase text-xs font-semibold mb-6">
+              Contact Us
+            </h4>
+            <ul className="space-y-4">
+              <li>
+                <span className="text-muted-foreground text-sm hover:text-white transition-colors cursor-default">
+                  +1 (437) 660-7347
+                </span>
+              </li>
+              <li>
+                <span className="text-muted-foreground text-sm hover:text-white transition-colors cursor-default">
+                  Toronto, ON, Canada
+                </span>
+              </li>
+              <li>
+                <a
+                  href="mailto:verexatechnologies@gmail.com"
+                  className="text-muted-foreground text-sm hover:text-primary transition-colors relative group block w-fit"
+                >
+                  verexatechnologies@gmail.com
+                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all group-hover:w-full"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-center gap-4">
+          <p className="text-muted-foreground text-sm">
+            © {new Date().getFullYear()} Verexa Technologies Inc. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function SocialLink({ href, icon }: { href: string; icon: React.ReactNode }) {
+  return (
+    <Link
+      href={href}
+      className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:text-white hover:bg-white/10 hover:border-white/20 transition-all shadow-inner hover:shadow-lg hover:-translate-y-1"
+    >
+      {icon}
+    </Link>
+  );
+}
+
+function FooterLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <li>
+      <Link
+        href={href}
+        className="text-muted-foreground text-sm hover:text-primary transition-colors relative group"
+      >
+        {children}
+        <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all group-hover:w-full"></span>
+      </Link>
+    </li>
+  );
+}
