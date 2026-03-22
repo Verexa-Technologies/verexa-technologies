@@ -1,10 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
-import { ChevronDown, Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import { Logo } from "@/components/logo";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -68,26 +67,7 @@ export function Navbar() {
               : "w-full max-w-full rounded-none border-b border-transparent py-6 px-10 sm:px-36"
           }`}
         >
-          <Link href="/">
-            <div className="flex items-center gap-3">
-              <Image
-                src="/logo.png"
-                alt="Verexa Logo"
-                width={120}
-                height={50}
-                className="h-8 sm:h-10 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-transform duration-300 hover:scale-105"
-                priority
-              />
-              <div className="flex flex-col justify-center drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]">
-                <span className="font-heading text-[22px] sm:text-[27px] font-medium leading-[1.05] bg-linear-to-b from-foreground from-20% to-muted-foreground sm:from-foreground sm:from-30% sm:to-muted-foreground to-100% bg-clip-text text-transparent uppercase">
-                  verexa
-                </span>
-                <span className="text-[8px] sm:text-[10px] font-light tracking-[0.2em] text-foreground/70 uppercase mt-1 leading-none">
-                  technologies
-                </span>
-              </div>
-            </div>
-          </Link>
+          <Logo />
 
           <div className="hidden md:flex items-center gap-10 pr-2">
             <Link

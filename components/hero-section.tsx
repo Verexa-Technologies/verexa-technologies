@@ -21,12 +21,14 @@ export function HeroSection() {
           <Button
             variant="heroSecondary"
             className="px-[29px] py-[24px] rounded-full text-base font-semibold tracking-wide"
+            onClick={() => (window.location.href = "#services")}
           >
             Explore Services
           </Button>
           <Button
             variant="heroSecondary"
             className="px-[29px] py-[24px] rounded-full text-base font-semibold tracking-wide"
+            onClick={() => (window.location.href = "#contact")}
           >
             Contact Us
           </Button>
@@ -38,7 +40,7 @@ export function HeroSection() {
       <img
         src="/hero-bg.gif"
         alt="Hero Background"
-        className="-mt-24 lg:-mt-[15%] w-full h-[600px] lg:h-auto min-h-[60%] object-cover object-top opacity-50 xl:opacity-75 pointer-events-none z-0"
+        className="-mt-32 lg:-mt-[15%] w-full h-[600px] lg:h-auto min-h-[60%] object-cover object-top opacity-50 xl:opacity-75 pointer-events-none z-0"
       />
     </section>
   );

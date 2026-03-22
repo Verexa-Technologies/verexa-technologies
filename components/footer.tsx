@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { Logo } from "@/components/logo";
 import { Twitter, Linkedin, Instagram, Youtube } from "lucide-react";
 
 export function Footer() {
@@ -12,26 +12,7 @@ export function Footer() {
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-4 sm:gap-x-8 gap-y-12 lg:gap-8 mb-8 md:mb-16">
           {/* Brand Col */}
           <div className="col-span-3 md:col-span-2 lg:col-span-2">
-            <Link href="/">
-              <div className="flex items-center gap-3">
-                <Image
-                  src="/logo.png"
-                  alt="Verexa Logo"
-                  width={120}
-                  height={50}
-                  className="h-8 sm:h-10 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-transform duration-300 hover:scale-105"
-                  priority
-                />
-                <div className="flex flex-col justify-center drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]">
-                  <span className="font-heading text-[22px] sm:text-[27px] font-medium leading-[1.05] bg-linear-to-b from-foreground from-20% to-muted-foreground sm:from-foreground sm:from-30% sm:to-muted-foreground to-100% bg-clip-text text-transparent uppercase">
-                    verexa
-                  </span>
-                  <span className="text-[8px] sm:text-[10px] font-light tracking-[0.2em] text-foreground/70 uppercase mt-1 leading-none">
-                    technologies
-                  </span>
-                </div>
-              </div>
-            </Link>
+            <Logo />
             <p className="text-muted-foreground text-sm font-medium leading-relaxed max-w-sm mt-4 mb-8">
               Empowering global brands with cutting-edge digital experiences. We
               design, build, and deploy the future.

@@ -37,7 +37,7 @@ export function ServicesSection() {
       <div className="max-w-[1250px] mx-auto px-4 sm:px-6 relative z-10 sm:pt-0 object-contain">
         <div className="text-center mb-16 relative">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.05] bg-linear-to-b from-foreground from-20% to-muted-foreground sm:from-foreground sm:from-30% sm:to-muted-foreground to-100% bg-clip-text text-transparent mb-6">
-            Our Services
+            What We Do
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
             Explore the comprehensive services that set Verexa apart in
