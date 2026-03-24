@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react";
 import Image from "next/image";
+import { Code2, Globe, Zap } from "lucide-react";
 
 export function AboutSection() {
   return (
@@ -77,30 +78,65 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* Right Visual Image Placeholder */}
-          <div className="w-full lg:w-1/2 relative flex items-center justify-center lg:justify-end py-12 lg:py-0">
+          {/* Right Visual Graphics */}
+          <div className="w-full lg:w-1/2 relative flex items-center justify-center lg:justify-end py-12 lg:py-0 min-h-[500px]">
             {/* Elegant backdrop glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] pointer-events-none"></div>
 
-            {/* Clean Photography Frame */}
-            <div className="w-full max-w-[500px] aspect-4/5 rounded-4xl bg-card/10 backdrop-blur-xs relative overflow-hidden border border-white/10 shadow-2xl group flex flex-col justify-end">
-              <Image
-                src="/about.png"
-                alt="About Image"
-                fill
-                className="absolute inset-0 w-full h-full object-cover z-0"
-              />
+            {/* Central Main Card */}
+            <div className="relative w-[280px] sm:w-[320px] xl:w-[380px] aspect-square rounded-3xl bg-card/40 backdrop-blur-xl border border-white/10 shadow-2xl flex flex-col items-center justify-center group z-20">
+              <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-primary/10 to-transparent opacity-50"></div>
+              
+              {/* Animated Rings */}
+              <div className="absolute w-[75%] h-[75%] rounded-full border border-primary/20 border-t-primary/60 animate-[spin_10s_linear_infinite]" />
+              <div className="absolute w-[55%] h-[55%] rounded-full border border-white/10 border-b-white/50 animate-[spin_15s_linear_infinite_reverse]" />
+              
+              {/* Logo/Center Icon */}
+              <div className="w-24 h-24 rounded-2xl bg-background/80 backdrop-blur-2xl border border-white/20 flex items-center justify-center shadow-[0_0_30px_hsl(var(--primary)/0.3)] z-10 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-700">
+                <Image src="/logo.png" alt="Verexa" width={60} height={60} className="object-contain drop-shadow-md" />
+              </div>
 
-              {/* Minimalist Info Overlay */}
-              <div className="relative z-10 m-6 p-6 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 flex items-center justify-between translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                <div>
-                  <p className="text-white font-medium text-lg leading-tight">
-                    Verexa Technologies Inc.
-                  </p>
-                  <p className="text-muted-foreground text-sm mt-1">
-                    Toronto, ON, Canada
-                  </p>
+              {/* Badges/Tags */}
+              <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-3 px-6">
+                <span className="px-4 py-1.5 rounded-full bg-background/50 backdrop-blur-md border border-white/10 text-[10px] text-white/90 font-medium tracking-widest uppercase shadow-lg">Innovation</span>
+                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 text-[10px] text-primary-foreground font-medium tracking-widest uppercase shadow-lg">Future</span>
+              </div>
+            </div>
+
+            {/* Floating Card 1 - Top Left */}
+            <div className="absolute top-[5%] left-[5%] xl:-left-[10%] w-52 p-4 rounded-2xl bg-background/60 backdrop-blur-2xl border border-white/10 shadow-2xl z-30 transform transition-transform duration-500 hover:scale-105 hover:-translate-y-2 cursor-default" style={{ animation: "float 6s ease-in-out infinite" }}>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center border border-primary/20 shadow-inner">
+                  <Code2 className="w-5 h-5 text-primary" />
                 </div>
+                <div>
+                  <div className="text-xs font-semibold text-white tracking-wide">Digital Craft</div>
+                  <div className="text-[9px] text-muted-foreground uppercase tracking-widest mt-0.5">Development</div>
+                </div>
+              </div>
+              <div className="space-y-2.5">
+                <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                  <div className="h-full bg-primary w-[85%] rounded-full shadow-[0_0_10px_hsl(var(--primary))]"></div>
+                </div>
+                <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                  <div className="h-full bg-primary/60 w-[60%] rounded-full"></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating Card 2 - Bottom Right */}
+            <div className="absolute bottom-[5%] right-[0%] xl:-right-[10%] w-60 p-5 rounded-2xl bg-card/80 backdrop-blur-2xl border border-white/10 shadow-2xl z-30 transform transition-transform duration-500 hover:scale-105 hover:-translate-y-2 cursor-default" style={{ animation: "float 7s ease-in-out infinite 1s" }}>
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <div className="text-[10px] text-primary uppercase tracking-widest mb-1 font-semibold">Global Reach</div>
+                  <div className="text-white font-medium text-sm">Toronto Base</div>
+                </div>
+                <div className="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-white text-[10px] font-bold">100%</div>
+              </div>
+              <div className="flex -space-x-3 mt-2">
+                <div className="w-10 h-10 rounded-full border-2 border-card bg-primary/20 flex items-center justify-center z-30 backdrop-blur-md shadow-md"><Globe className="w-4 h-4 text-primary" /></div>
+                <div className="w-10 h-10 rounded-full border-2 border-card bg-accent/20 flex items-center justify-center z-20 backdrop-blur-md shadow-md"><Zap className="w-4 h-4 text-white" /></div>
+                <div className="w-10 h-10 rounded-full border-2 border-card bg-white/10 flex items-center justify-center z-10 backdrop-blur-md shadow-md"><span className="text-xs text-white font-bold tracking-tighter">10+</span></div>
               </div>
             </div>
           </div>
