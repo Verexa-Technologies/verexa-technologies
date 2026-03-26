@@ -13,7 +13,7 @@ export function HeroSection() {
         </h1>
 
         <p className="text-center md:text-xl sm:leading-8 sm:max-w-2xl opacity-80 text-foreground/82">
-          Innovative digital solutions for modern businesses. <br />
+          Innovative digital solutions for modern businesses.
           Web, Mobile, Design, Infra and Support - all in one place.
         </p>
 

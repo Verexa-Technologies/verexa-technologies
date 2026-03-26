@@ -10,7 +10,7 @@ export function AboutSection() {
       className="bg-background pt-24 overflow-hidden relative border-t border-border/10 scroll-mt-24"
     >
       <div className="max-w-[1250px] mx-auto px-4 sm:px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
+        <div className="flex flex-col md:flex-row items-center gap-8 lg:gap-16">
           {/* Left Content Area */}
           <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.05] bg-linear-to-b from-foreground from-20% to-muted-foreground sm:from-foreground sm:from-30% sm:to-muted-foreground to-100% bg-clip-text text-transparent mb-6">
@@ -29,7 +29,7 @@ export function AboutSection() {
             </p>
 
             {/* Embedded Stats Row */}
-            <div className="flex items-center justify-between gap-4 sm:gap-0 w-full mt-2">
+            <div className="flex items-start justify-between w-full mt-2">
               <div className="w-full text-center relative flex-1 min-w-0 group cursor-default p-2">
                 <div className="absolute inset-0 rounded-2xl shadow-inner group-hover:bg-card/60 transition-colors"></div>
                 <div className="relative z-10">
@@ -70,7 +70,7 @@ export function AboutSection() {
                     99%
                   </div>
                   <p className="text-muted-foreground/70 text-xs">
-                    Clients Satisfied
+                    Clients Success Rate
                   </p>
                 </div>
               </div>
@@ -89,6 +89,8 @@ export function AboutSection() {
                 <div className="relative p-7 sm:p-8 rounded-4xl overflow-hidden group hover:-translate-y-2 transition-all duration-500">
                   <div className="absolute inset-0 bg-card/60 backdrop-blur-3xl border border-white/0 rounded-4xl z-0 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] transition-colors duration-500 group-hover:border-primary/20 group-hover:bg-primary/5"></div>
                   <div className="absolute -inset-x-12 -inset-y-12 bg-linear-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-500 z-0"></div>
+                  {/* Top Border Highlight */}
+                  <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent pointer-events-none z-30"></div>
 
                   <div className="relative z-10">
                     <div className="font-heading text-4xl sm:text-5xl font-light text-white/15 mb-6 group-hover:text-primary transition-colors duration-500">
@@ -108,6 +110,8 @@ export function AboutSection() {
                 <div className="relative p-7 sm:p-8 rounded-4xl overflow-hidden group hover:-translate-y-2 transition-all duration-500">
                   <div className="absolute inset-0 bg-card/60 backdrop-blur-3xl border border-white/0 rounded-4xl z-0 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] transition-colors duration-500 group-hover:border-accent/20 group-hover:bg-accent/5"></div>
                   <div className="absolute -inset-x-12 -inset-y-12 bg-linear-to-bl from-accent/10 to-transparent opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-500 z-0"></div>
+                  {/* Top Border Highlight */}
+                  <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent pointer-events-none z-30"></div>
 
                   <div className="relative z-10">
                     <div className="font-heading text-4xl sm:text-5xl font-light text-white/15 mb-6 group-hover:text-accent transition-colors duration-500">
@@ -130,6 +134,8 @@ export function AboutSection() {
                 <div className="relative p-7 sm:p-8 rounded-4xl overflow-hidden group hover:-translate-y-2 transition-all duration-500">
                   <div className="absolute inset-0 bg-card/60 backdrop-blur-3xl border border-white/0 rounded-4xl z-0 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] transition-colors duration-500 group-hover:border-accent/20 group-hover:bg-accent/5"></div>
                   <div className="absolute -inset-x-12 -inset-y-12 bg-linear-to-tr from-accent/10 to-transparent opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-500 z-0"></div>
+                  {/* Top Border Highlight */}
+                  <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent pointer-events-none z-30"></div>
 
                   <div className="relative z-10">
                     <div className="font-heading text-4xl sm:text-5xl font-light text-white/15 mb-6 group-hover:text-accent transition-colors duration-500">
@@ -148,6 +154,8 @@ export function AboutSection() {
                 <div className="relative p-7 sm:p-8 rounded-4xl overflow-hidden group hover:-translate-y-2 transition-all duration-500">
                   <div className="absolute inset-0 bg-card/60 backdrop-blur-3xl border border-white/0 rounded-4xl z-0 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] transition-colors duration-500 group-hover:border-accent/20 group-hover:bg-accent/5"></div>
                   <div className="absolute -inset-x-12 -inset-y-12 bg-linear-to-tl from-accent/10 to-transparent opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-500 z-0"></div>
+                  {/* Top Border Highlight */}
+                  <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent pointer-events-none z-30"></div>
 
                   <div className="relative z-10">
                     <div className="font-heading text-4xl sm:text-5xl font-light text-white/15 mb-6 group-hover:text-accent transition-colors duration-500">
