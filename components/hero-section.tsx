@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -13,25 +14,27 @@ export function HeroSection() {
         </h1>
 
         <p className="text-center md:text-xl sm:leading-8 sm:max-w-2xl opacity-80 text-foreground/82">
-          Innovative digital solutions for Canadian businesses.
-          Web, Mobile, Design, Infra and Support — all in one place.
+          Innovative digital solutions for Canadian businesses. Web, Mobile,
+          Design, Infra and Support — all in one place.
         </p>
 
         <div className="mt-8 mb-[66px] flex gap-4">
-          <Button
-            variant="heroSecondary"
-            className="px-[29px] py-[24px] rounded-full text-base font-semibold tracking-wide"
-            onClick={() => (window.location.href = "#services")}
-          >
-            Explore Services
-          </Button>
-          <Button
-            variant="heroSecondary"
-            className="px-[29px] py-[24px] rounded-full text-base font-semibold tracking-wide"
-            onClick={() => (window.location.href = "#contact")}
-          >
-            Contact Us
-          </Button>
+          <Link href="/services">
+            <Button
+              variant="heroSecondary"
+              className="px-[29px] py-[24px] rounded-full text-base font-semibold tracking-wide"
+            >
+              Explore Services
+            </Button>
+          </Link>
+          <Link href="/contact">
+            <Button
+              variant="heroSecondary"
+              className="px-[29px] py-[24px] rounded-full text-base font-semibold tracking-wide"
+            >
+              Contact Us
+            </Button>
+          </Link>
         </div>
       </div>
       {/* Background Gradient to fade background at the bottom */}

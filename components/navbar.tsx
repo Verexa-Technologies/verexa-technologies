@@ -5,6 +5,12 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/logo";
 
+const navLinks = [
+  { href: "/services", label: "Services" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+];
+
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -70,31 +76,16 @@ export function Navbar() {
           <Logo />
 
           <div className="hidden md:flex items-center gap-10 pr-2">
-            <Link
-              href="#services"
-              className="text-foreground/90 text-[15px] font-medium hover:text-primary transition-colors relative group py-2"
-            >
-              Services
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] rounded-full bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link
-              href="#about"
-              className="text-foreground/90 text-[15px] font-medium hover:text-primary transition-colors relative group py-2"
-            >
-              About
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] rounded-full bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            {/* <Link href="#portfolio" className="text-foreground/90 text-[15px] font-medium hover:text-primary transition-colors relative group py-2">
-            Portfolio
-            <span className="absolute bottom-0 left-0 w-0 h-[2px] rounded-full bg-primary transition-all duration-300 group-hover:w-full"></span>
-          </Link> */}
-            <Link
-              href="#contact"
-              className="text-foreground/90 text-[15px] font-medium hover:text-primary transition-colors relative group py-2"
-            >
-              Contact
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] rounded-full bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </Link>
+            {navLinks.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className="text-foreground/90 text-md font-medium hover:text-primary transition-colors relative group py-2"
+              >
+                {label}
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] rounded-full bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            ))}
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -128,34 +119,16 @@ export function Navbar() {
               : "translate-y-8 opacity-0"
           }`}
         >
-          <Link
-            href="#services"
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-3xl font-medium tracking-wide text-foreground/90 hover:text-primary transition-colors"
-          >
-            Services
-          </Link>
-          <Link
-            href="#about"
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-3xl font-medium tracking-wide text-foreground/90 hover:text-primary transition-colors"
-          >
-            About
-          </Link>
-          {/* <Link
-            href="#portfolio"
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-3xl font-medium tracking-wide text-foreground/90 hover:text-primary transition-colors"
-          >
-            Portfolio
-          </Link> */}
-          <Link
-            href="#contact"
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-3xl font-medium tracking-wide text-foreground/90 hover:text-primary transition-colors"
-          >
-            Contact
-          </Link>
+          {navLinks.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-3xl font-medium tracking-wide text-foreground/90 hover:text-primary transition-colors"
+            >
+              {label}
+            </Link>
+          ))}
         </div>
       </div>
     </>

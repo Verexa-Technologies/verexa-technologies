@@ -1,5 +1,7 @@
 "use client";
 
+import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 import { ReactNode } from "react";
 
 export function AboutSection() {
@@ -13,13 +15,14 @@ export function AboutSection() {
           {/* Left Content Area */}
           <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.05] bg-linear-to-b from-foreground from-20% to-muted-foreground sm:from-foreground sm:from-30% sm:to-muted-foreground to-100% bg-clip-text text-transparent mb-6">
-              Who We Are
+              About Us
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Verexa Technologies Inc. is a GTA-based technology company committed to crafting
-              exceptional experiences for Canadian businesses. We blend
-              cutting-edge technology with world-class design to help companies
-              across Canada scale, innovate, and lead their industries.
+              Verexa Technologies Inc. is a GTA-based technology company
+              committed to crafting exceptional experiences for Canadian
+              businesses. We blend cutting-edge technology with world-class
+              design to help companies across Canada scale, innovate, and lead
+              their industries.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
               Our team of visionary designers, expert engineers, and strategic
@@ -144,7 +147,8 @@ export function AboutSection() {
                       Canadian Roots
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Proudly headquartered in Toronto, serving businesses coast to coast.
+                      Proudly headquartered in Toronto, serving businesses coast
+                      to coast.
                     </p>
                   </div>
                 </div>
@@ -172,6 +176,15 @@ export function AboutSection() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="mt-16 flex justify-center">
+          <Link
+            href="/about"
+            className="inline-flex items-center gap-2 liquid-glass text-foreground hover:bg-white/10 transition-all duration-300 ease-in-out px-8 py-4 rounded-xl font-medium group relative z-10"
+          >
+            Learn More
+            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </section>

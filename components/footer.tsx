@@ -43,9 +43,9 @@ export function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-4">
-              <FooterLink href="#services">Services</FooterLink>
-              <FooterLink href="#portfolio">About</FooterLink>
-              <FooterLink href="#contact">Contact</FooterLink>
+              <FooterLink href="/services">Services</FooterLink>
+              <FooterLink href="/about">About</FooterLink>
+              <FooterLink href="/contact">Contact</FooterLink>
             </ul>
           </div>
 
@@ -55,6 +55,11 @@ export function Footer() {
               Contact Us
             </h4>
             <ul className="space-y-4">
+              <li>
+                <span className="text-muted-foreground text-sm hover:text-white transition-colors">
+                  Toronto, ON, Canada
+                </span>
+              </li>
               <li>
                 <a
                   href="mailto:contact@verexa.ca"
@@ -72,11 +77,6 @@ export function Footer() {
                   +1 (437) 660-7347
                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all group-hover:w-full"></span>
                 </a>
-              </li>
-              <li>
-                <span className="text-muted-foreground text-sm hover:text-white transition-colors">
-                  Toronto, ON, Canada
-                </span>
               </li>
             </ul>
           </div>
